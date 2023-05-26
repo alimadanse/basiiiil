@@ -1,0 +1,14 @@
+
+#tour_detail.html
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}
+{{ tour.title }}
+{% endblock title %}
+
+{% block content %}
+<h2>{{ tour.title }}</h2>
+<img src="/static/img/tour_photos/t2.jpg" alt="عکس">
+<p>{{ tour.description }}</p>
+<a href="{% url 'tour_register' tour.id %}">Register</a>
+{% endblock content %}
